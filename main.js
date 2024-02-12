@@ -1,5 +1,7 @@
 const start=document.getElementById('enter');
+const tweet=document.getElementById('post');
 
+let all=0;
 
 function total(){
 
@@ -27,7 +29,7 @@ function total(){
     let kyouyou=0;
     let kyouyou3nen=0;
     let suuken=0;
-    let all=0;
+    all=0;
 
     grade+=document.getElementById('grade').value-'0';
 
@@ -523,3 +525,10 @@ function total(){
 }
 
 start.addEventListener('click',total);
+
+tweet.addEventListener('click',()=>{
+    let tweet_content=`私は東京理科大学理学部第一部数学科で${all}単位取得しています。%0A`;
+    let url="https://m1ffyz.github.io/S_credits_check/";
+
+    window.open("https://twitter.com/intent/tweet?text="+tweet_content+url);
+});
