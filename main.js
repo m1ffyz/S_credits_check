@@ -269,7 +269,7 @@ function total(){
     
     kyouyou3nen+=Number(document.getElementById('kyouyou3nen').value);
 
-    all=senmonkiso+kikankiso+kanrensenmon+hissyuu+sentakuhissyuu+sentaku+kyouyou;
+    all=senmonkiso+kikankiso+kanrensenmon+hissyuu+sentakuhissyuu+sentaku+kyouyou+eigo1+eigo2+dai2gai;
 
     // 単位出力
     let table=document.createElement('table');
