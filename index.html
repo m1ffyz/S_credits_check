@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>理学部第一部数学科 単位数チェック</title>
+
+    <link rel="stylesheet" type="text/css" href="./index.css">
+</head>
+
+<body>
+    <header>理学部第一部数学科 単位数チェック</header>
+
+
+<h1>学年を選択</h1>
+<select id="grade">
+    <option value="1">1年生</option>
+    <option value="2">2~4年生 (数学研究未履修/通常の2年生)</option>
+    <option value="3">3~4年生 (数学研究履修中or履修済・卒業研究未履修/通常の3年生)</option>
+    <option value="4">4年生 (卒業研究履修中or履修済み)</option>
+</select><br>
+選択に応じて以下が判定されます。
+<ul>
+    <li>1年生 : 2年次への進級</li>
+    <li>2~4年生 : 数学研究の履修</li>
+    <li>3~4年生 : 卒業研究の履修</li>
+    <li>任意の選択 : 卒業所要単位</li>
+</ul>
+
+<h1>履修済み(または今年度に履修予定)の科目を選択</h1>
+
+<h2>1年次標準履修科目</h2>
+<label><input type="checkbox" id="kaisekikiso">解析学の基礎 (3)</label><br>
+<label><input type="checkbox" id="1biseki">1変数の微分積分 (2)</label><br>
+<label><input type="checkbox" id="tabiseki">多変数の微分積分 (5)</label><br>
+<label><input type="checkbox" id="senkei1">線形代数学1 (3)</label><br>
+<label><input type="checkbox" id="senkei2">線形代数学2 (3)</label><br>
+<label><input type="checkbox" id="ronshu">論理と集合 (3)</label><br>
+<label><input type="checkbox" id="kikakiso">幾何学基礎 (3)</label><br>
+<label><input type="checkbox" id="comnyu1">コンピュータ入門1 (2)</label><br>
+<label><input type="checkbox" id="comnyu2">コンピュータ入門2 (2)</label><br>
+理科科目履修単位数<br>
+<select id="ks">
+    <option value="0">0単位 (0科目)</option>
+    <option value="2">2単位 (1科目)</option>
+    <option value="4">4単位 (2科目)</option>
+    <option value="6">6単位以上 (3科目以上)</option>
+</select><br>
+<b>1年次</b>英語科目(L&S1/L&S2/R&W1/R&W2)履修単位数<br>
+<select id="eng1">
+    <option value="0">0単位 (0科目)</option>
+    <option value="1">1単位 (1科目)</option>
+    <option value="2">2単位 (2科目)</option>
+    <option value="3">3単位 (3科目)</option>
+    <option value="4">4単位 (4科目)</option>
+</select><br>
+第2外国語履修単位数<br>
+<select id="2gai">
+    <option value="0">0単位 (0科目)</option>
+    <option value="1">1単位 (1科目)</option>
+    <option value="2">2単位 (2科目)</option>
+    <option value="3">3単位 (3科目)</option>
+    <option value="4">4単位以上 (4科目以上)</option>
+</select><br>
+
+<h2>2年次標準履修科目</h2>
+<label><input type="checkbox" id="kaiseki1">解析学1 (3)</label><br>
+<label><input type="checkbox" id="kaiseki2">解析学2 (3)</label><br>
+<label><input type="checkbox" id="daisuu1">代数学1 (3)</label><br>
+<label><input type="checkbox" id="daisuu2">代数学2 (3)</label><br>
+<label><input type="checkbox" id="kika1">幾何学1 (3)</label><br>
+<label><input type="checkbox" id="kika2">幾何学2 (3)</label><br>
+<label><input type="checkbox" id="toukei1">数理統計学1 (3)</label><br>
+<label><input type="checkbox" id="toukei2">数理統計学2 (3)</label><br>
+<label><input type="checkbox" id="isou1">位相1 (3)</label><br>
+<label><input type="checkbox" id="isou2">位相2 (2)</label><br>
+<label><input type="checkbox" id="comgai1">コンピュータ概論1 (2)</label><br>
+<label><input type="checkbox" id="comgai2">コンピュータ概論2 (2)</label><br>
+
+<b>2年次</b>英語科目(L&S3/L&S4/R&W3/R&W4)履修単位数<br>
+<select id="eng2">
+    <option value="0">0単位 (0科目)</option>
+    <option value="1">1単位 (1科目)</option>
+    <option value="2">2単位 (2科目)</option>
+    <option value="3">3単位 (3科目)</option>
+    <option value="4">4単位 (4科目)</option>
+</select><br>
+
+<h2>3年次標準履修科目</h2>
+<label><input type="checkbox" id="suuken1">数学研究1 (3)</label><br>
+<label><input type="checkbox" id="suuken2">数学研究2 (3)</label><br>
+<label><input type="checkbox" id="sekibun">積分論 (3)</label><br>
+<label><input type="checkbox" id="kansuukaiseki">関数解析 (2)</label><br>
+<label><input type="checkbox" id="kansuuron">関数論 (2)</label><br>
+<label><input type="checkbox" id="bibunnhouteisiki">微分方程式論 (3)</label><br>
+<label><input type="checkbox" id="galois1">体とガロワ理論1 (2)</label><br>
+<label><input type="checkbox" id="galois2">体とガロワ理論2 (2)</label><br>
+<label><input type="checkbox" id="kagun1">環と加群1 (2)</label><br>
+<label><input type="checkbox" id="kagun2">環と加群2 (2)</label><br>
+<label><input type="checkbox" id="bibunkika1">微分幾何学1 (3)</label><br>
+<label><input type="checkbox" id="bibunkika2">微分幾何学2 (3)</label><br>
+<label><input type="checkbox" id="isoukika">位相幾何学 (2)</label><br>
+<label><input type="checkbox" id="kakuritu1">確率論1 (2)</label><br>
+<label><input type="checkbox" id="kakuritu2">確率論2 (2)</label><br>
+<label><input type="checkbox" id="kyouikuron1">数学科教育論1 (2)</label><br>
+<label><input type="checkbox" id="kyouikuron2">数学科教育論2 (2)</label><br>
+<label><input type="checkbox" id="kyouikusuugaku">教育数学 (2)</label><br>
+<label><input type="checkbox" id="keisan1">計算数学1 (2)</label><br>
+<label><input type="checkbox" id="keisan2">計算数学2 (2)</label><br>
+<label><input type="checkbox" id="pro1">プログラミング1 (2)</label><br>
+<label><input type="checkbox" id="pro2">プログラミング2 (2)</label><br>
+<label><input type="checkbox" id="jouhousuugaku">情報数学特別講義 (2)</label><br>
+<label><input type="checkbox" id="system">情報システム概論 (2)</label><br>
+<label><input type="checkbox" id="network">ネットワーク概論 (2)</label><br>
+<label><input type="checkbox" id="media">マルチメディア論 (2)</label><br>
+
+<h2>4年次標準履修科目</h2>
+<label><input type="checkbox" id="sotsuken">卒業研究 (8)</label><br>
+<label><input type="checkbox" id="kaiseki3">解析学3 (2)</label><br>
+<label><input type="checkbox" id="kaiseki4">解析学4 (2)</label><br>
+<label><input type="checkbox" id="daisuu3">代数学3 (2)</label><br>
+<label><input type="checkbox" id="daisuu4">代数学4 (2)</label><br>
+<label><input type="checkbox" id="kika3">幾何学3 (2)</label><br>
+<label><input type="checkbox" id="kika4">幾何学4 (2)</label><br>
+<label><input type="checkbox" id="kikatoku1">幾何学特論1 (2)</label><br>
+<label><input type="checkbox" id="kikatoku2">幾何学特論2 (2)</label><br>
+<label><input type="checkbox" id="suutoku1">数学特別講義1 (2)</label><br>
+<label><input type="checkbox" id="suutoku2">数学特別講義2 (2)</label><br>
+<label><input type="checkbox" id="suutoku3">数学特別講義3 (2)</label><br>
+<label><input type="checkbox" id="suutoku4">数学特別講義4 (2)</label><br>
+<label><input type="checkbox" id="suutoku5">数学特別講義5 (2)</label><br>
+<label><input type="checkbox" id="suutoku6">数学特別講義6 (1)</label><br>
+<label><input type="checkbox" id="suutoku7">数学特別講義7 (1)</label><br>
+<label><input type="checkbox" id="suutoku8">数学特別講義8 (1)</label><br>
+<label><input type="checkbox" id="gazousyori">数式・図形・画像処理 (2)</label><br>
+
+<h2>一般教養科目</h2>
+英語必修・第2外国語必修(計12単位)を<b>含めない</b>一般教養科目の履修単位数を<b>半角数字</b>で入力<br>
+<input type="text" id="kyouyou"><br>
+<b>その中で</b>、3年次以降に履修した単位数を<b>半角数字</b>で入力<br>
+<input type="text" id="kyouyou3nen"><br>
+※一般教養科目を入力しなくても、2年次への進級条件と数学研究履修条件の判定は利用できます。<br>
+
+<h2>専門選択科目に算入する他学科科目</h2>
+専門選択科目に参入する他学科科目を履修した場合は単位数を<b>半角数字</b>で入力<br>
+<input type="text" id="tagakka"><br>
+
+<h1>実行</h1>
+<button id="enter">実行</button>
+
+<h1>結果</h1>
+
+<h2>履修単位数</h2>
+<div id="tannisuu"></div>
+
+<h2>進級・卒業条件</h2>
+<div id="cond"></div>
+
+
+
+
+
+
+</body>
+
+
+
+<script src="main.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
