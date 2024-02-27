@@ -33,6 +33,10 @@ td:nth-of-type(2),td:nth-of-type(3){
     text-align: right;
 }
 
+#enter {
+    border-radius: 100vh
+}
+
 @media screen and (max-width:480px) {
 
 	header{
@@ -41,6 +45,10 @@ td:nth-of-type(2),td:nth-of-type(3){
 
     #grade {
         width: 100%;
+    }
+
+    #enter {
+        text-align: center;
     }
 
 }
