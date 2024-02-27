@@ -9,11 +9,15 @@ header{
 h1{
     font-size: 25px;
     font-weight: 150;
+    padding: 0.1em 0.3em;
+	border-left: 10px solid #00BCD4;
 }
 
 h2{
     font-size: 20px;
     font-weight: 120;
+    padding: 0.07em 0.2em;
+	border-left: 10px solid yellow;
 }
 
 table,td,th{
