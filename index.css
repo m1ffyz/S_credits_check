@@ -1,10 +1,15 @@
 header{
     background-color: white;
-    height: 50px;
+    height: 80px;
     font-size: 30px;
     text-align: center;
     border-bottom: 2px black solid;
 }
+
+.version{
+    font-size: 20px;
+}
+
 
 h1{
     font-size: 25px;
@@ -33,10 +38,16 @@ td:nth-of-type(2),td:nth-of-type(3){
     text-align: right;
 }
 
+
 @media screen and (max-width:480px) {
 
 	header{
         font-size: 20px;
+        height: 60px;
+    }
+
+    .version{
+        font-size: 15px;
     }
 
     #grade {
