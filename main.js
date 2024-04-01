@@ -206,6 +206,12 @@ function total(){
     if(document.getElementById('media').checked==true){
         sentaku+=2;
     }
+    if(document.getElementById('ai').checked==true){
+        sentaku+=2;
+    }
+    if(document.getElementById('rigaku').checked==true){
+        sentaku+=2;
+    }
     
     // 4年
 
@@ -447,7 +453,7 @@ function total(){
         }
     }
     if(grade==3){
-        if(hissyuu1nen+hissyuu2nen>=50 && suuken==6 && kanrensenmon==6 && sentakuhissyuu>=4 && eigo2==4 && dai2gai==4 && all>100){
+        if(hissyuu1nen+hissyuu2nen>=50 && suuken==6 && kanrensenmon==6 && sentakuhissyuu>=4 && eigo2==4 && dai2gai==4 && all>=100){
             document.getElementById('cond').innerHTML+=`あなたは卒業研究を履修することができます。<br>`;
         }else{
             document.getElementById('cond').innerHTML+=`あなたは卒業研究を履修することができません。以下の条件を満たす必要があります。<br><ul>`;
@@ -455,7 +461,7 @@ function total(){
                 document.getElementById('cond').innerHTML+=`<li>1年次必修科目・2年次必修科目を残り${50-hissyuu1nen-hissyuu2nen}単位取得する</li>`;
             }
             if(suuken<6){
-                document.getElementById('cond').innerHTML+=`<li>数学研究1/数学研究2を取得する`;
+                document.getElementById('cond').innerHTML+=`<li>数学研究1/数学研究2の単位を取得する`;
             }
             if(kanrensenmon<6){
                 document.getElementById('cond').innerHTML+=`<li>関連専門科目(理科科目)を残り${6-kanrensenmon}単位取得する</li>`;
